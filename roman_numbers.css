@@ -1,0 +1,143 @@
+/********  GENERAL  ********/
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+:root {
+    --darker-color: #201b3a;
+    --dark-color: #794561;
+    --light-color: #db8b8b;
+    --lighter-color: #f1c0a7;
+}
+
+body {
+    background: -webkit-linear-gradient(top, var(--darker-color), var(--dark-color), var(--light-color), var(--lighter-color));
+    color: white;
+    min-height: 100vh;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    font-weight: lighter;
+
+    display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+}
+
+.container {
+    width: 60%;
+    max-width: 600px;
+}
+
+
+/********  TITLE  ********/
+h1 {
+    width: 100%;
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    font-weight: lighter;
+}
+
+
+
+
+/********  INPUT BOX  ********/
+.input_box {
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border: white solid 2px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+
+}
+
+label {
+    font-size: 1.5em;
+}
+
+
+
+
+
+    /********  BUTTONS BOX  ********/
+    .buttons_box {
+        display: flex;
+    }
+
+    input, button {
+        margin-top: 30px;
+        padding: 5px 0px;
+        width: 100%;
+        color: white;
+        font-size: 1.5em;
+        text-align: center;
+        background-color: transparent;
+        border: white 2px solid;
+        border-radius: 10px;
+    }
+
+    input[type="button"] {
+        color: var(--light-color);
+        background-color: white;
+        opacity: 0.7;
+        cursor: pointer;
+        transition: all 0.5s ease;
+
+            flex: 9;
+    }
+
+    input[type="button"]:hover {
+        opacity: 1;
+    }
+
+    button {
+        margin-left: 10px;
+        cursor: pointer;
+        transition: all 0.5s ease;
+
+            flex: 1;
+    }
+
+    button:hover {
+        color: var(--light-color);
+        background-color: white;
+    }
+
+
+
+
+
+/********  RESULT BOX  ********/
+.result_box {
+    font-size: 1.5em;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.2);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    border: white 2px solid;
+    border-radius: 10px;
+    overflow: hidden;
+    opacity: 0;
+}
+
+.animated {
+    animation-name: display;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes display {
+    from {
+        height: 0px;
+        opacity: 0;
+    }
+
+    to {
+        margin-top: 30px;
+        padding: 20px 0px;
+        height: 73px;
+        opacity: 1;
+    }
+}
